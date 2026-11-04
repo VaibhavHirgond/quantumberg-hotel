@@ -1,0 +1,13 @@
+[build]
+  command = "cd frontend && npm ci && npm run build -- --base=/"
+  publish = "kamra/public/frontend"
+
+[[redirects]]
+  from = "/"
+  to = "/kamra/"
+  status = 301
+
+[[redirects]]
+  from = "/kamra/*"
+  to = "/index.html"
+  status = 200
